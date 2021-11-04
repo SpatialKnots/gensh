@@ -32,27 +32,53 @@ class Characters {
   });
 
   factory Characters.fromJson(Map<String, dynamic> js) {
-    return Characters(
-      name: js['name'] as String,
-      vision: js['vision'] as String,
-      weapon: js['weapon'] as String,
-      nation: js['nation'] as String,
-      affiliation: js['affiliation'] as String,
-      rarity: js['rarity'] as int,
-      birthday: js['birthday'] as String,
-      description: js['description'] as String,
-      skillTalents: (js['skillTalents'] as List<dynamic>).map(
-              (dynamic e) => SkillTalents.fromJson(e as Map<String, dynamic>)
-      ).toList(),
-      passiveTalents: (js['passiveTalents'] as List<dynamic>).map(
-              (dynamic e) => PassiveTalents.fromJson(e as Map<String, dynamic>)
-      ).toList(),
-      constellations: (js['constellations'] as List<dynamic>).map(
-              (dynamic e) => Constellations.fromJson(e as Map<String, dynamic>)
-      ).toList(),
-      vision_key: js['vision_key'] as String,
-      weapon_type: js['weapon_type'] as String,
-    );
+    if(js['birthday'].runtimeType != Null) {  // birthday check
+      return Characters(
+        name: js['name'] as String,
+        vision: js['vision'] as String,
+        weapon: js['weapon'] as String,
+        nation: js['nation'] as String,
+        affiliation: js['affiliation'] as String,
+        rarity: js['rarity'] as int,
+        birthday: js['birthday'] as String,
+        description: js['description'] as String,
+        skillTalents: (js['skillTalents'] as List<dynamic>).map(
+                (dynamic e) => SkillTalents.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        passiveTalents: (js['passiveTalents'] as List<dynamic>).map(
+                (dynamic e) => PassiveTalents.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        constellations: (js['constellations'] as List<dynamic>).map(
+                (dynamic e) => Constellations.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        vision_key: js['vision_key'] as String,
+        weapon_type: js['weapon_type'] as String,
+      );
+    } else {
+      const birthday = 'NaN';
+      return Characters(
+        name: js['name'] as String,
+        vision: js['vision'] as String,
+        weapon: js['weapon'] as String,
+        nation: js['nation'] as String,
+        affiliation: js['affiliation'] as String,
+        rarity: js['rarity'] as int,
+        birthday: birthday,
+        description: js['description'] as String,
+        skillTalents: (js['skillTalents'] as List<dynamic>).map(
+                (dynamic e) => SkillTalents.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        passiveTalents: (js['passiveTalents'] as List<dynamic>).map(
+                (dynamic e) => PassiveTalents.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        constellations: (js['constellations'] as List<dynamic>).map(
+                (dynamic e) => Constellations.fromJson(e as Map<String, dynamic>)
+        ).toList(),
+        vision_key: js['vision_key'] as String,
+        weapon_type: js['weapon_type'] as String,
+      );
+    }
+
   }
 }
 
