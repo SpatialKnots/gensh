@@ -1,4 +1,4 @@
-import 'package:gensh/data/json_parser/characters/sub_classes.dart';
+import 'package:gensh/data/json_parser_all/characters/sub_classes_all.dart';
 
 class Characters {
   final String name;

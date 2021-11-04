@@ -90,5 +90,8 @@ const jsonString = """
     ],
     "vision_key": "GEO",
     "weapon_type": "SWORD"
+  },
+  {
+    
   }
 ]""";
