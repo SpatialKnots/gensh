@@ -49,7 +49,7 @@ const jsonString = """
           "value": "114% / 142%"
         }
       ],
-      "type": "NORMAL_ATTACKooo"
+      "type": "NORMAL_ATTACK"
     },
     {
       "name": "Reflection of Doom",

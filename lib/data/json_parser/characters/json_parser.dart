@@ -1,20 +1,20 @@
 import 'dart:convert';
 import 'package:gensh/assets/characters/characters_jsons/all.dart';
-import 'package:gensh/data/json_parser_all/characters/main_class_all.dart';
+import 'package:gensh/data/json_parser/characters/main_class.dart';
 // ignore_for_file: avoid_print
 
 void main() {
-  var characters = JsParse().decode();
-  JsParse().printer(characters, 'venti');
-  //print(JsParse().heroes(characters)['albedo'].name);
+  final char = JsParse().decode();
+  JsParse().printer(char, 'albedo');
 }
+
 class JsParse {
   decode() {
     final js = jsonDecode(jsonString) as List<dynamic>;
-    final char = js.map((e) => Characters.fromJson(e as Map<String, dynamic>)).toList();
+    final char = js.map((hero) => Characters.fromJson(hero as Map<String, dynamic>)).toList();
     return char;
-
   }
+
   void printer(char, String heroName) {
     print('name: ${JsParse().heroes(char)[heroName].name}');
     print('nation: ${JsParse().heroes(char)[heroName].nation}');
@@ -23,9 +23,9 @@ class JsParse {
     print('vision: ${JsParse().heroes(char)[heroName].vision}');
     print('affiliation: ${JsParse().heroes(char)[heroName].affiliation}');
     print('weapon: ${JsParse().heroes(char)[heroName].weapon}');
-    print('weapon_type: ${JsParse().heroes(char)[heroName].weapon_type}');
+    print('weapon_type: ${JsParse().heroes(char)[heroName].weaponType}');
     print('birthday: ${JsParse().heroes(char)[heroName].birthday}');
-    print('vision_key: ${JsParse().heroes(char)[heroName].vision_key}');
+    print('vision_key: ${JsParse().heroes(char)[heroName].visionKey}');
     print('skillTalents:');
     for(int i=0; i < JsParse().heroes(char)[heroName].skillTalents.length; i++){
       print('${i+1}. ${JsParse().heroes(char)[heroName].skillTalents[i].name}');
@@ -37,7 +37,7 @@ class JsParse {
     for(int i=0; i < JsParse().heroes(char)[heroName].passiveTalents.length; i++){
       print('${i+1}. ${JsParse().heroes(char)[heroName].passiveTalents[i].name}');
       print(JsParse().heroes(char)[heroName].passiveTalents[i].description);
-      print('type: ${JsParse().heroes(char)[heroName].passiveTalents[i].level}');
+      print('level: ${JsParse().heroes(char)[heroName].passiveTalents[i].level}');
       print('unlock: ${JsParse().heroes(char)[heroName].passiveTalents[i].unlock}\n');
     }
     print('constellations:');
@@ -50,7 +50,7 @@ class JsParse {
   }
 
   heroes(char) {
-    Map<String, dynamic> heroes = {
+    Map<String, dynamic> chars = {
       'albedo': char[0],
       'aloy': char[1],
       'amber': char[2],
@@ -95,6 +95,6 @@ class JsParse {
       'yoimiya': char[41],
       'zhongli': char[42],
     };
-    return heroes;
+    return chars;
   }
 }
