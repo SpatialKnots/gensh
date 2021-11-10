@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gensh/pages/home.dart';
 import 'package:gensh/pages/characters.dart';
 import 'package:gensh/pages/weapons.dart';
-import 'package:gensh/pages/artefacts.dart';
+import 'package:gensh/pages/artifacts.dart';
 
 // ignore_for_file: prefer_const_constructors
 void main() => runApp(const MyApp());

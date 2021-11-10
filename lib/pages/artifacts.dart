@@ -9,7 +9,7 @@ class ArtefactScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Artefacts')),
       body: Center(
-        child: Text('artefacts'),
+        child: Text('artifacts'),
       ),
     );
   }

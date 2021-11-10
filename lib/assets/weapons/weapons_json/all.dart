@@ -1,4 +1,4 @@
-const jsString = '''
+const jsonString = '''
 [
   {
     "name": "Alley Hunter",
@@ -227,7 +227,7 @@ const jsString = '''
     "baseAttack": 41,
     "subStat": "Physical DMG Bonus",
     "passiveName": "Frost Burial",
-    "passiveDesc": "Hitting an opponent with Normal and Charged Attacks has a 60/70/80/90/100% chance of forming and dropping an Everfrost Icicle above them, dealing 80/95/110/125/140% AoE ATK DMG.\nOpponents affected by Cryo are dealt 200/240/280/320/360% ATK DMG. Can only occur once every 10s.",
+    "passiveDesc": "Hitting an opponent with Normal and Charged Attacks has a 60/70/80/90/100% chance of forming and dropping an Everfrost Icicle above them, dealing 80/95/110/125/140% AoE ATK DMG. Opponents affected by Cryo are dealt 200/240/280/320/360% ATK DMG. Can only occur once every 10s.",
     "location": "Crafting"
   },
   {
@@ -257,7 +257,7 @@ const jsString = '''
     "baseAttack": 46,
     "subStat": "Energy Recharge",
     "passiveName": "The Parting Refrain",
-    "passiveDesc": "A part of the \"Millennial Movement\" that wanders amidst the winds. Increases Elemental Mastery by 60/75/90/105/120. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s. \"Millennial Movement: Farewell Song\" increases Elemental Mastery by 100/125/150/175/200 and increases ATK by 20/25/30/35/40%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "passiveDesc": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases Elemental Mastery by 60/75/90/105/120. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Farewell Song' effect for 12s. 'Millennial Movement: Farewell Song' increases Elemental Mastery by 100/125/150/175/200 and increases ATK by 20/25/30/35/40%. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
     "location": "Gacha"
   },
   {
@@ -383,11 +383,11 @@ const jsString = '''
   {
     "name": "Freedom-Sworn",
     "type": "Sword",
-    "rarity": "5",
-    "BaseAttack": "46",
+    "rarity": 5,
+    "BaseAttack": 46,
     "subStat": "Elemental Mastery",
     "passiveName": "Revolutionary Chorale",
-    "passiveDesc": "A part of the \"Millennial Movement\" that wanders amidst the winds. Increases DMG by 10%/12.5%/15%/17.5%/20%. When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if said character is not on the field.When you possess 2 Sigils of Rebellion, all of them will be consumed and all nearby party members will obtain \"Millennial Movement: Song of Resistance\" for 12s. \"Millennial Movement: Song of Resistance\" increases Normal, Charged, and Plunging Attack DMG by 16%/20%/24%/28%/32% and increases ATK by 20%/25%/30%/35%/40%. Once this effect is triggered, you will not gain Sigils of Rebellion for 20s.Of the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "passiveDesc": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases DMG by 10%/12.5%/15%/17.5%/20%. When the character wielding this weapon triggers Elemental Reactions, they gain a Sigil of Rebellion. This effect can be triggered once every 0.5s and can be triggered even if said character is not on the field.When you possess 2 Sigils of Rebellion, all of them will be consumed and all nearby party members will obtain 'Millennial Movement: Song of Resistance' for 12s. 'Millennial Movement: Song of Resistance' increases Normal, Charged, and Plunging Attack DMG by 16%/20%/24%/28%/32% and increases ATK by 20%/25%/30%/35%/40%. Once this effect is triggered, you will not gain Sigils of Rebellion for 20s.Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
     "location": "Gacha"
   },
   {
@@ -643,8 +643,8 @@ const jsString = '''
   {
     "name": "Primordial-Jade-Cutter",
     "type": "Sword",
-    "rarity": "5",
-    "BaseAttack": "44",
+    "rarity": 5,
+    "BaseAttack": 44,
     "subStat": "CRIT Rate",
     "passiveName": "Protector's Virtue",
     "passiveDesc": "HP increased by 20%/25%/30%/35%/40%. Additionally, provides an ATK Bonus based on 1.2%/1.5%/1.8%/2.1%/2.4% of the wielder's Max HP.",
@@ -927,7 +927,7 @@ const jsString = '''
     "baseAttack": 44,
     "subStat": "Energy Recharge",
     "passiveName": "Sky-Piercing Fang",
-    "passiveDesc": "CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst:\nIncreases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by 20% for 12s.",
+    "passiveDesc": "CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by 20% for 12s.",
     "location": "Gacha"
   },
   {
@@ -997,7 +997,7 @@ const jsString = '''
     "baseAttack": 49,
     "subStat": "Physical DMG Bonus",
     "passiveName": "Rebel's Banner-Hymn",
-    "passiveDesc": "A part of the \"Millennial Movement\" that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s. \"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "passiveDesc": "A part of the 'Millennial Movement' that wanders amidst the winds. Increases ATK by 16%, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the 'Millennial Movement: Banner-Hymn' effect for 12s. 'Millennial Movement: Banner-Hymn' increases Normal ATK SPD by 12% and increases ATK by 20%. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the 'Millennial Movement,' buffs of the same type will not stack.",
     "location": "Gacha"
   },
   {
@@ -1023,8 +1023,8 @@ const jsString = '''
   {
     "name": "Sword-of-Descension",
     "type": "Sword",
-    "rarity": "4",
-    "BaseAttack": "39",
+    "rarity": 4,
+    "BaseAttack": 39,
     "subStat": "ATK",
     "passiveName": "Descension",
     "passiveDesc": "Hitting enemies with Normal or Charged Attacks grants a 50% chance to deal 200% ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by 66.",
@@ -1057,7 +1057,7 @@ const jsString = '''
     "baseAttack": 42,
     "subStat": "CRIT Rate",
     "passiveName": "Justice",
-    "passiveDesc": "Increases DMG dealt by Normal and Charged Attacks by 20%.\nAdditionally, regenerates 60% of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.",
+    "passiveDesc": "Increases DMG dealt by Normal and Charged Attacks by 20%. Additionally, regenerates 60% of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.",
     "location": "BP Bounty"
   },
   {
@@ -1117,7 +1117,7 @@ const jsString = '''
     "baseAttack": 42,
     "subStat": "CRIT DMG",
     "passiveName": "Debut",
-    "passiveDesc": "When the character takes the field, they gain a random theme song for 10s:\nRecitative: Increases Base ATK by 60%\nInterlude: Elemental Mastery is increased by 240\nAria: Increases all Elemental DMG by 48%\nCan only occur once every 30s",
+    "passiveDesc": "When the character takes the field, they gain a random theme song for 10s: Recitative: Increases Base ATK by 60% Interlude: Elemental Mastery is increased by 240 Aria: Increases all Elemental DMG by 48% Can only occur once every 30s",
     "location": "Gacha"
   },
   {

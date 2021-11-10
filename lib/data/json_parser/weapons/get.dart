@@ -1,4 +1,3 @@
-//import 'package:json_annotation/json_annotation.dart';
 import 'package:gensh/assets/weapons/weapons_json/weapon_names.dart';
 import 'dart:convert';
 import 'dart:io';
@@ -6,21 +5,16 @@ import 'dart:io';
 
 Future<void> main() async {
   var finalList = [];
-  print(weaponNames.length);
+  print(itemNames.length);
 
-  for (int i = 0; i < weaponNames.length; i++) {
-    var x = 'weapons/' + weaponNames[i].toString();
+  for (int i = 0; i < itemNames.length; i++) {
+    var x = 'weapons/' + itemNames[i].toString();
     print(x);
     final result = await ApiClient().getData(x);
     finalList.add(result);
   }
   print('Hey! $finalList');
-  // print('Hey! ${finalList.length}');
-
-  // var fileCopy = await File('C:/dev/Projects/gensh/lib/data/data-test.json').writeAsString(finalList.toString());
-  // print(await fileCopy.exists);
-  // print(await fileCopy.length());
-  }
+}
 
 
 class ApiClient {
@@ -80,19 +74,4 @@ class Weapons {
         location: location
     );
   }
-
-  // factory Weapons.toJson(Map<String, dynamic> js) {
-  //   // return a map literal with all the non-null key-value pairs
-  //   js['name'] = name;
-  //   return {
-  //     'name': name,
-  //     'type': type,
-  //     'rarity': rarity,
-  //     'baseAttack': baseAttack,
-  //     'subStat': subStat,
-  //     'passiveName': passiveName,
-  //     'passiveDesc': passiveDesc,
-  //     'location': location,
-  //   };
-  // }
 }

@@ -1,4 +1,4 @@
-const weaponNames = [
+const itemNames = [
   "alley-hunter",
   "amber-catalyst",
   "amenoma-kageuchi",
